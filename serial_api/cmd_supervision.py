@@ -11,7 +11,7 @@ SUPERVISION_DELAY_MIN = 4
 SUPERVISION_DELAY_MAX = 5
 
 # supervision 
-CMD_SUPERVISION=(b'\x0f\x00\xa9\x01\x02\x03\x6c\x01\xff\x25\x00\x00\x00\x00')
+CMD_SUPERVISION=(b'\x0f\x00\xa9\x01\x0a\x03\x6c\x01\xff\x25\x00\x00\x00\x00')
 # ACK 
 ACK=(b'\x06')
 # SOF 
@@ -25,7 +25,7 @@ class supervision:
     def __init__(self):
         pass
     
-    def run(self, seq=0):
+    def run(seq=0):
         
         #serial port instance
         ser = zSerial()

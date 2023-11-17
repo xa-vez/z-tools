@@ -36,7 +36,7 @@ Version: 1.0.0.b (beta)
 
 - User can run each test using: \
 -- $ python3 cmd_basic_set.py \
--- $ python3 cmd_supervision_set.py
+-- $ python3 cmd_supervision.py
 
 - User can run all tests using: \
 -- $ python3 ztest.py

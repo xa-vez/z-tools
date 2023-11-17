@@ -11,9 +11,9 @@ BASIC_SET_DELAY_MIN = 4
 BASIC_SET_DELAY_MAX = 5
    
 # basic set ON
-CMD_ON=(b'\x0f\x00\xa9\x01\x02\x03\x20\x01\x01\x25\x00\x00\x00\x00')
+CMD_ON=(b'\x0f\x00\xa9\x01\x0a\x03\x20\x01\x01\x25\x00\x00\x00\x00')
 # basic set OFF 
-CMD_OFF=(b'\x0f\x00\xa9\x01\x02\x03\x20\x01\x00\x25\x00\x00\x00\x00')
+CMD_OFF=(b'\x0f\x00\xa9\x01\x0a\x03\x20\x01\x00\x25\x00\x00\x00\x00')
 # ACK 
 ACK=(b'\x06')
 # SOF 
@@ -27,7 +27,7 @@ class basic_set:
     def __init__(self):
         pass
     
-    def run(self, seq=0):
+    def run(seq=0):
 
         #serial port instance
         ser = zSerial()

@@ -3,7 +3,7 @@
 set -e 
 
 ## Path to devices running Rail Test
-SERIAL_RAIL_TEST="/dev/ttyACM1"
+SERIAL_RAIL_TEST="/dev/ttyACM2"
 
 FREQ_US_CH0="916000000"
 FREQ_US_CH1="908400000"

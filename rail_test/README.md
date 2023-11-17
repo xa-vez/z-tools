@@ -1,0 +1,13 @@
+
+
+
+#define RF_FREQ_STRING_EU         "EU"
+#define RF_FREQ_CH0_EU_VALUE      (869850000)
+#define RF_FREQ_CH1_EU_VALUE      (868400000)
+#define RF_FREQ_CH2_EU_VALUE      (868400000)
+
+
+#define RF_FREQ_STRING_US         "US"
+#define RF_FREQ_CH0_US_VALUE      (916000000)
+#define RF_FREQ_CH1_US_VALUE      (908400000)
+#define RF_FREQ_CH2_US_VALUE      (908400000)

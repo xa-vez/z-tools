@@ -10,15 +10,17 @@ import serial
 #
 class zSerial:
    
-    def __init__(self):
-        pass
-    
+    def __init__(self, serial="/dev/ttyACM0", baudrate=115200):
+        self.ser = ''
+        self.port = serial
+        self.baudrate = baudrate
+
     def Flush(self):
         self.ser.flushInput()
         self.ser.flushOutput()
         
     def Open(self):
-        self.ser = serial.Serial('/dev/ttyACM0', baudrate=115200, timeout=0.05 )        
+        self.ser = serial.Serial(self.port, self.baudrate, timeout=0.05)        
         self.ser.setRTS(False)
     
     def Close(self):

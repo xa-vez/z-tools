@@ -45,39 +45,39 @@ Version: 1.0.0.b (beta)
 ## Protocol 
 https://sdomembers.z-wavealliance.org/wg/Members/document/previewpdf/1769
 
-(Byte 0) SOF
-(Byte 1) length : from length to cs
-(Byte 2) type : 0-> request 1->response (all other values are reserved)
-(Byte 3) Command ID N bytes : 
-(Byte 3+n) Command Payload 
-(Byte 3+n+1) CS 
+(Byte 0) SOF \
+(Byte 1) length : from length to cs \
+(Byte 2) type : 0-> request 1->response (all other values are reserved) \
+(Byte 3) Command ID N bytes \
+(Byte 3+n) Command Payload \
+(Byte 3+n+1) CS \
 
 CMD_ON=(b'\x0f\x00\xa9\x01\xDD\x03\x20\x01\x01\x27\x00\x00\x00\x00')
 
-0x01 : Start of Frame (to be concatenated)
-0x0f : lenth
-0x00 : request
-0xa9 : Bridge Controller Node Send Data Command
-    x01\x0a\x03\x20\x01\x01\x27\x00\x00\x00\x00' : Payload Command
+0x01 : Start of Frame (to be concatenated) \
+0x0f : lenth \
+0x00 : type->request \
+0xa9 : Bridge Controller Node Send Data Command \
+    x01\x0a\x03\x20\x01\x01\x27\x00\x00\x00\x00' : Payload Command \
     
-    0x01: Source node Id
-    0xDD: Destination node Id
-    0x03: Data Length
+    0x01: Source node Id \
+    0xDD: Destination node Id \
+    0x03: Data Length \
             
-    0x20:
-    0x01:
-    0x01: ON
+    0x20:  \
+    0x01:  \
+    0x01: ON  \
 
-0x27: Tx Options ( 
-    7bit:Reserved
-    6bit:Reserved
-    5bit:Enable Explore NPDUs ***
-    4bit:Disable Routing
-    3bit:Reserved
-    2bit:Enable Automatic Routing ***
-    1bit:Transmit with low power
-    0bit:TMPDU Acknowledgment request ***
+0x27: Tx Options \
+    7bit:Reserved \
+    6bit:Reserved \
+    5bit:Enable Explore NPDUs *** \
+    4bit:Disable Routing \
+    3bit:Reserved \
+    2bit:Enable Automatic Routing *** \
+    1bit:Transmit with low power \
+    0bit:TMPDU Acknowledgment request *** \
 
-0x00\0x00\0x00\0x00 : Route 
-0xXX: Session Identifier  (to be concatenated)
-0xYY: Checksum  (to be concatenated)
+0x00\0x00\0x00\0x00 : Route  \
+0xXX: Session Identifier  (to be concatenated) \
+0xYY: Checksum  (to be concatenated) \

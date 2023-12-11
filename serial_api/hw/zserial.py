@@ -32,13 +32,13 @@ class zSerial:
         return data
     
     def SendCommand(self, command):
-        print(str(datetime.datetime.now()) + ' W ' + binascii.hexlify(command).decode('utf-8'))
+        print(str(datetime.datetime.now(datetime.timezone.utc).isoformat()) + ' W ' + binascii.hexlify(command, ' ').decode('utf-8'))
         logging.debug('W ' + binascii.hexlify(command).decode('utf-8'))
         self.ser.write(command)  
     
     def ReadResponse(self):
         data = self.ReadAll()  
-        print(str(datetime.datetime.now()) + ' R ' + binascii.hexlify(data).decode('utf-8'))
+        print(str(datetime.datetime.now(datetime.timezone.utc).isoformat()) + ' R ' + binascii.hexlify(data, ' ').decode('utf-8'))
         logging.debug('R ' + binascii.hexlify(data).decode('utf-8'))
         return data
     
